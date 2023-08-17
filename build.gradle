@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+dependencies {
+    testImplementation 'io.cucumber:cucumber-java:7.13.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.13.0'
+    testImplementation 'io.rest-assured:rest-assured:5.3.1'
+    testImplementation 'io.rest-assured:json-schema-validator:5.3.1'
+    testImplementation 'com.typesafe:config:1.4.2'
+    testImplementation 'org.apache.commons:commons-csv:1.10.0'
+    testImplementation 'org.apache.commons:commons-text:1.10.0'
+    testImplementation 'net.masterthought:cucumber-reporting:5.7.6'
+}
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    systemProperty 'env', System.properties.getProperty('env')
+    systemProperty "cucumber.options", System.properties.getProperty("cucumber.options")
+}
