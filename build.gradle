@@ -20,5 +20,4 @@ repositories {
 
 test {
     systemProperty 'env', System.properties.getProperty('env')
-    systemProperty "cucumber.options", System.properties.getProperty("cucumber.options")
-}
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")}

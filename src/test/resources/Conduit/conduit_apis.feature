@@ -8,7 +8,7 @@ Feature: Conduit
       | testuser1 | testuser1@gmail.com | password1 |
       | testuser2 | testuser2@gmail.com | password2 |
 
-    Scenario Outline: Sign in API Test
+  Scenario Outline: Sign in API Test
       * Sign in with user "<UserName>" successful
 
       Examples:

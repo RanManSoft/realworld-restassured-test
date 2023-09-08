@@ -18,8 +18,7 @@ public class TestBase {
 
 
     public TestBase() {
-        //String env = System.getProperty("env");
-        String env = "remote";
+        String env = System.getProperty("env");
         Config config = ConfigFactory.load("conf/common.conf").getConfig(env);
         String TEST_DATA_FILE_PATH = "data/" + env + "/test_datas.csv";
         initialTestData(TEST_DATA_FILE_PATH);
